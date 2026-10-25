@@ -16,6 +16,10 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
+# Android 10: <system/thread_defs.h> and <hardware/audio_effect.h> come from
+# Soong header libraries, not global include paths.
+LOCAL_HEADER_LIBRARIES := libsystem_headers libhardware_headers libaudio_system_headers
+
 LOCAL_SRC_FILES:= \
 	offload_visualizer.c
 

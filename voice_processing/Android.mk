@@ -20,6 +20,11 @@ LOCAL_CFLAGS += \
 LOCAL_C_INCLUDES += \
     $(call include-path-for, audio-effects)
 
+# <hardware/audio_effect.h> -> hardware/libhardware/include (libhardware_headers)
+# which pulls <system/audio_effect.h> -> system/media/audio/include
+# (libaudio_system_headers). In Android 10 these are exposed via header libs.
+LOCAL_HEADER_LIBRARIES := libhardware_headers libaudio_system_headers
+
 LOCAL_SHARED_LIBRARIES := \
     libcutils liblog
 

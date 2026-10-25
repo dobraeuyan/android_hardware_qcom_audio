@@ -61,6 +61,13 @@ LOCAL_C_INCLUDES := \
         $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
 	$(call include-path-for, audio-effects)
 
+LOCAL_HEADER_LIBRARIES := \
+	libhardware_headers \
+	libsystem_headers \
+	libaudio_system_headers \
+	libutils_headers \
+	liblog_headers
+
 include $(BUILD_SHARED_LIBRARY)
 
 ifeq ($(strip $(AUDIO_FEATURE_ENABLED_HW_ACCELERATED_EFFECTS)),true)
@@ -70,6 +77,13 @@ LOCAL_SRC_FILES := EffectsHwAcc.cpp
 
 LOCAL_C_INCLUDES := \
     $(call include-path-for, audio-effects)
+
+LOCAL_HEADER_LIBRARIES := \
+    libhardware_headers \
+    libsystem_headers \
+    libaudio_system_headers \
+    libutils_headers \
+    liblog_headers
 
 LOCAL_SHARED_LIBRARIES := \
     liblog \

@@ -21,6 +21,7 @@
 /* #define LOG_NDEBUG 0 */
 
 #include <errno.h>
+#include <unistd.h>
 #include <cutils/properties.h>
 #include <cutils/config_utils.h>
 #include <stdlib.h>

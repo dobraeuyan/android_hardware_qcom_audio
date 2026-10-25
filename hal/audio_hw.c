@@ -48,6 +48,8 @@
 #include <pthread.h>
 #include <stdint.h>
 #include <sys/time.h>
+#include <unistd.h>
+#include <sys/ioctl.h>
 #include <stdlib.h>
 #include <math.h>
 #include <dlfcn.h>

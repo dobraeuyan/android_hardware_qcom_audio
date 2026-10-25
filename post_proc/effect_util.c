@@ -16,6 +16,8 @@
 
 #include <utils/Log.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
 #include "effect_util.h"
 #include <string.h>
 

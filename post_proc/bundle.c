@@ -44,6 +44,8 @@
 #include <tinyalsa/asoundlib.h>
 #include <hardware/audio_effect.h>
 #include <stdlib.h>
+#include <pthread.h>
+#include <unistd.h>
 #include "bundle.h"
 #include "hw_accelerator.h"
 #include "equalizer.h"
